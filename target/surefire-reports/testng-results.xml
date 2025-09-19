@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-09-17T08:44:04 IST" name="Mainsuite" finished-at="2025-09-17T08:44:27 IST" duration-ms="22923">
+    <groups>
+    </groups>
+    <test started-at="2025-09-17T08:44:04 IST" name="AddSearchedProductsToCart_Login Testing" finished-at="2025-09-17T08:44:27 IST" duration-ms="22923">
+      <class name="testcases.SearchingProducts">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testcases.SearchingProducts@1fa268de]" started-at="2025-09-17T08:44:04 IST" name="setup" finished-at="2025-09-17T08:44:08 IST" duration-ms="4472" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.automationexercise.com/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="searchforProducts(java.lang.String)[pri:1, instance:testcases.SearchingProducts@1fa268de]" started-at="2025-09-17T08:44:08 IST" name="searchforProducts" data-provider="search products" finished-at="2025-09-17T08:44:21 IST" duration-ms="12919" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[green]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchforProducts -->
+        <test-method signature="loginusingvalidcredentials(java.lang.String,java.lang.String)[pri:2, instance:testcases.SearchingProducts@1fa268de]" started-at="2025-09-17T08:44:21 IST" name="loginusingvalidcredentials" data-provider="validLoginCredentials" finished-at="2025-09-17T08:44:26 IST" duration-ms="5372" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[rudra300@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[newpassword123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginusingvalidcredentials -->
+        <test-method signature="cartvaliadtion()[pri:3, instance:testcases.SearchingProducts@1fa268de]" started-at="2025-09-17T08:44:26 IST" name="cartvaliadtion" finished-at="2025-09-17T08:44:26 IST" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cartvaliadtion -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testcases.SearchingProducts@1fa268de]" started-at="2025-09-17T08:44:26 IST" name="teardown" finished-at="2025-09-17T08:44:27 IST" duration-ms="127" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- testcases.SearchingProducts -->
+    </test> <!-- AddSearchedProductsToCart_Login Testing -->
+  </suite> <!-- Mainsuite -->
+</testng-results>

@@ -1,0 +1,17 @@
+pages/CartPage.class
+base/SetupTeardown.class
+pages/PaymentPage.class
+pages/HomePage.class
+pages/CategoryPage.class
+dataprovider/DataProviderClass.class
+pages/OrderPlacedPage.class
+pages/SignupLoginPage.class
+pages/ContactUsFormPage.class
+pages/TestCasesPage.class
+pages/ProductsPage.class
+utils/UtilityClass.class
+pages/CheckoutPage.class
+pages/AccountCreatedDeletedPage.class
+pages/AccountCreationPage.class
+pages/BrandPage.class
+pages/ProductDetailsPage.class

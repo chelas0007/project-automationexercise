@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name = "Mainsuite">
+<parameter name = "url" value ="https://www.automationexercise.com/"/>
+<parameter name = "browser" value = "chrome"/>
+
+	 <!-- <test name ="Registeruser">
+		<classes>
+			<class name ="testcases.RegisterLoginUser"/>
+		</classes>
+	</test> -->  
+	
+	<!-- <test name ="LoginLogoutUser">
+		<classes>
+			<class name ="testcases.LoginLogoutUser"/>
+		</classes>
+	</test> 
+	 -->
+	 
+	 <!-- <test name ="ContactUsForm">
+		<classes>
+			<class name ="testcases.ContactUsForm"/>
+		</classes>
+	</test>  -->
+	
+	 <!-- <test name ="TestcasePage">
+		<classes>
+			<class name ="testcases.TestCasePageValiadtion"/>
+		</classes>
+	</test>   -->
+	<!-- 
+	 <test name ="Product Testing">
+		<classes>
+			<class name ="testcases.ProductTesting"/>
+		</classes>
+	</test>  -->
+	
+	<!-- <test name ="Subscription Testing">
+		<classes>
+			<class name ="testcases.SubscriptionTesting"/>
+		</classes>
+	</test> --> 
+	 
+	 <!--  <test name ="Cart Testing">
+		<classes>
+			<class name ="testcases.CartTesting"/>
+		</classes>
+	</test>  -->
+	
+	
+	 <!-- <test name ="Checkout Testing">
+		<classes>
+			<class name ="testcases.CheckoutTesting"/>
+		</classes>
+	</test>  -->
+	
+	<!-- <test name ="Category Testing">
+		<classes>
+			<class name ="testcases.CategoryTesting"/>
+		</classes>
+	</test>  -->
+	
+	<!-- <test name ="Brand Testing">
+		<classes>
+			<class name ="testcases.BrandTesting"/>
+		</classes>
+	</test> --> 
+	
+	<test name ="AddSearchedProductsToCart_Login Testing">
+		<classes>
+			<class name ="testcases.SearchingProducts"/>
+		</classes>
+	</test> 
+	
+	
+</suite>

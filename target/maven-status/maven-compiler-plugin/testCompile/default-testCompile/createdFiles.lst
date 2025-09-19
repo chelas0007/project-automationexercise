@@ -1,0 +1,11 @@
+testcases/CartTesting.class
+testcases/SubscriptionTesting.class
+testcases/RegisterLoginUser.class
+testcases/ContactUsForm.class
+testcases/TestCasePageValiadtion.class
+testcases/ProductTesting.class
+testcases/BrandTesting.class
+testcases/CategoryTesting.class
+testcases/LoginLogoutUser.class
+testcases/SearchingProducts.class
+testcases/CheckoutTesting.class

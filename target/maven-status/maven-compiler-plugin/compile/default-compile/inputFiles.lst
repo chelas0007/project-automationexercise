@@ -1,0 +1,17 @@
+/Users/monishachelasp/SQA/corejava/project-automationexercise/src/main/java/base/SetupTeardown.java
+/Users/monishachelasp/SQA/corejava/project-automationexercise/src/main/java/dataprovider/DataProviderClass.java
+/Users/monishachelasp/SQA/corejava/project-automationexercise/src/main/java/pages/AccountCreatedDeletedPage.java
+/Users/monishachelasp/SQA/corejava/project-automationexercise/src/main/java/pages/AccountCreationPage.java
+/Users/monishachelasp/SQA/corejava/project-automationexercise/src/main/java/pages/BrandPage.java
+/Users/monishachelasp/SQA/corejava/project-automationexercise/src/main/java/pages/CartPage.java
+/Users/monishachelasp/SQA/corejava/project-automationexercise/src/main/java/pages/CategoryPage.java
+/Users/monishachelasp/SQA/corejava/project-automationexercise/src/main/java/pages/CheckoutPage.java
+/Users/monishachelasp/SQA/corejava/project-automationexercise/src/main/java/pages/ContactUsFormPage.java
+/Users/monishachelasp/SQA/corejava/project-automationexercise/src/main/java/pages/HomePage.java
+/Users/monishachelasp/SQA/corejava/project-automationexercise/src/main/java/pages/OrderPlacedPage.java
+/Users/monishachelasp/SQA/corejava/project-automationexercise/src/main/java/pages/PaymentPage.java
+/Users/monishachelasp/SQA/corejava/project-automationexercise/src/main/java/pages/ProductDetailsPage.java
+/Users/monishachelasp/SQA/corejava/project-automationexercise/src/main/java/pages/ProductsPage.java
+/Users/monishachelasp/SQA/corejava/project-automationexercise/src/main/java/pages/SignupLoginPage.java
+/Users/monishachelasp/SQA/corejava/project-automationexercise/src/main/java/pages/TestCasesPage.java
+/Users/monishachelasp/SQA/corejava/project-automationexercise/src/main/java/utils/UtilityClass.java
