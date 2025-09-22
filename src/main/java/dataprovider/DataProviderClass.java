@@ -8,7 +8,7 @@ public class DataProviderClass {
 	public Object[][] dp1(){
 		return new Object[][] {
 			
-			{"Rudra100","rudra100@gmail.com"}
+			{"Rudra200","rudra200@gmail.com"}
 		};
 	}
 	
