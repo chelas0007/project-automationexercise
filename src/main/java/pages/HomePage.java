@@ -6,12 +6,12 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import utils.UtilityClass;
+import utils.ScrollNWaitUtils;
 
 
 public class HomePage {
 	
-	WebDriver driver;
+	private WebDriver driver;
 	
 	public HomePage(WebDriver driver){
 		
@@ -20,99 +20,94 @@ public class HomePage {
 		
 	}
 	
-	@FindBy(xpath="//img[@alt='Website for automation practice']") WebElement titleimage;
-	@FindBy(xpath="//a[normalize-space()='Signup / Login']") WebElement signuploginbutton;
-	@FindBy(xpath="//li/a[contains(text(),\"Logged in as\")]") WebElement loggedinasuser;
-	@FindBy(xpath="//a[normalize-space()='Delete Account']") WebElement deleteaccount;
-	@FindBy(xpath="//a[normalize-space()='Logout']") WebElement logoutbutton;
-	@FindBy(xpath="//a[normalize-space()='Contact us']") WebElement ContactUsForm;
-	@FindBy(xpath="//a[contains(text(),'Test Cases')]") WebElement TestCases;
-	@FindBy(xpath="//a[@href='/products']")WebElement Products;
-	@FindBy(xpath="//input[@id='susbscribe_email']")WebElement subcribetext;
-	@FindBy(xpath="//i[@class='fa fa-arrow-circle-o-right']")WebElement sunscribebutton;
-	@FindBy(xpath="//div[@id='success-subscribe']")WebElement subscribedmessage;
-	@FindBy(xpath="//a[normalize-space()='Cart']")WebElement cartbutton;
-	@FindBy(xpath="//div//a[@href='/product_details/5']") WebElement product5view;
-	@FindBy(xpath="(//div[@class='product-image-wrapper'])[3]") WebElement product5hover;
-	@FindBy(xpath="(//div[@class='product-overlay'])[3]//a[@class='btn btn-default add-to-cart']") WebElement product3addtocart;
-	@FindBy(xpath="//u[normalize-space()='View Cart']") WebElement viewcart;
-	@FindBy(xpath="//h2[normalize-space()='Category']") WebElement Category;
-	@FindBy(xpath="//a[normalize-space()='Women']") WebElement womencategory;
-	@FindBy(xpath="//div[@id='Women']//a[contains(text(),'Dress')]") WebElement dressinwomencategory;
-	//@FindBy(xpath="//u[normalize-space()='View Cart']") WebElement viewcart;
-	//@FindBy(xpath="//u[normalize-space()='View Cart']") WebElement viewcart;
+	@FindBy(xpath="//img[@alt='Website for automation practice']") private WebElement titleimage;
+	@FindBy(xpath="//a[normalize-space()='Signup / Login']") private WebElement signuploginbutton;
+	@FindBy(xpath="//li/a[contains(text(),\"Logged in as\")]") private WebElement loggedinasuser;
+	@FindBy(xpath="//a[normalize-space()='Delete Account']") private WebElement deleteaccount;
+	@FindBy(xpath="//a[normalize-space()='Logout']") private WebElement logoutbutton;
+	@FindBy(xpath="//a[normalize-space()='Contact us']") private WebElement ContactUsForm;
+	@FindBy(xpath="//a[contains(text(),'Test Cases')]") private WebElement TestCases;
+	@FindBy(xpath="//a[@href='/products']")private WebElement Products;
+	@FindBy(xpath="//input[@id='susbscribe_email']")private WebElement subcribetext;
+	@FindBy(xpath="//i[@class='fa fa-arrow-circle-o-right']")private WebElement sunscribebutton;
+	@FindBy(xpath="//div[@id='success-subscribe']")private WebElement subscribedmessage;
+	@FindBy(xpath="//a[normalize-space()='Cart']")private WebElement cartbutton;
+	@FindBy(xpath="//div//a[@href='/product_details/5']") private WebElement product5view;
+	@FindBy(xpath="(//div[@class='product-image-wrapper'])[3]") private WebElement product5hover;
+	@FindBy(xpath="(//div[@class='product-overlay'])[3]//a[@class='btn btn-default add-to-cart']") private WebElement product3addtocart;
+	@FindBy(xpath="//u[normalize-space()='View Cart']") private WebElement viewcart;
+	@FindBy(xpath="//h2[normalize-space()='Category']") private WebElement Category;
+	@FindBy(xpath="//a[normalize-space()='Women']") private WebElement womencategory;
+	@FindBy(xpath="//div[@id='Women']//a[contains(text(),'Dress')]") private WebElement dressinwomencategory;
 	
 	
-	public boolean ishomepagevisible() {
+	public boolean isHomePageVisible() {
 		return titleimage.isDisplayed();
 	}
 	
-	public void signuploginbutton() {
+	public void clickSignupLoginButton() {
 		signuploginbutton.click();
 	}
 	
-	public boolean loggedinasuservisible() {
+	public boolean isLoggedInAsUserVisible() {
 		return loggedinasuser.isDisplayed();
 	}
 	
-	public void deleteaccount() {
+	public void clickDeleteAccountButton() {
 		deleteaccount.click();
 	}
 	
-	public void logoutaccount() {
+	public void clickLogoutAccountButton() {
 		logoutbutton.click();
 	}
 	
-	public void contactusform() {
+	public void clickContactUsFormButton() {
 		ContactUsForm.click();
 	}
 	
-	public void testcases() {
+	public void clickTestcasesButton() {
 		TestCases.click();
 	}
 	
-	public void productsicon() {
+	public void clickProductsButton() {
 		Products.click();
 	}
 	
-	public void subscriptioncheck(String email) {
-		UtilityClass.scrollbottom(driver);
+	public void checkForSubscription(String email) {
+		ScrollNWaitUtils.scrollToBottom(driver);
 		subcribetext.sendKeys(email);
 		sunscribebutton.click();
 	}
 	
-	public boolean issubcribedmessagevisisble() {
+	public boolean isSubcribedMessageVisisble() {
 		return subscribedmessage.isDisplayed();
 	}
 	
-	public void cartbuttonnavigate() {
+	public void clickCartbutton() {
 		cartbutton.click();
 	}
 	
-	public void viewproduct5() {
-		UtilityClass.scroll(driver, product5view);
+	public void viewProduct5() {
+		ScrollNWaitUtils.scroll(driver, product5view);
 		product5view.click();
 	}
 	
-	public void addtocartproduct5() {
-		UtilityClass.scroll(driver, product5hover);
+	public void addToCartProduct5() {
+		ScrollNWaitUtils.scroll(driver, product5hover);
 		Actions a = new Actions(driver);
 		a.moveToElement(product5hover).build().perform();
-		UtilityClass.waituntilclickable(driver, product3addtocart);
-		product3addtocart.click();
-		UtilityClass.waituntilclickable(driver, viewcart);
-		viewcart.click();
+		ScrollNWaitUtils.waitAndClick(driver, product3addtocart);
+		ScrollNWaitUtils.waitAndClick(driver, viewcart);
 	}
 	
-	public boolean iscategoryvisible() {
-		UtilityClass.scroll(driver, Category);
+	public boolean isCategoryVisible() {
+		ScrollNWaitUtils.scroll(driver, Category);
 		return Category.isDisplayed();
 	}
 	
-	public void choosecategory() {
+	public void chooseWomenCategory() {
 		womencategory.click();
-		UtilityClass.waituntilclickable(driver, dressinwomencategory);
-		dressinwomencategory.click();
+		ScrollNWaitUtils.waitAndClick(driver, dressinwomencategory);
 	}
 	
 

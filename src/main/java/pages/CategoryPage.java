@@ -7,31 +7,29 @@ import org.openqa.selenium.support.PageFactory;
 
 public class CategoryPage {
 	
-	WebDriver driver;
+	private WebDriver driver;
 	
 	public CategoryPage(WebDriver driver){
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath="//h2[contains(text(),'Women -')]")WebElement womancategoryheading;
-	@FindBy(xpath="//a[normalize-space()='Men']")WebElement mencategory;
-	@FindBy(xpath="//a[normalize-space()='Jeans']")WebElement jeans;
-	@FindBy(xpath="//h2[normalize-space()='Men - Jeans Products']")WebElement mencategorypage;
-	//@FindBy(xpath="")WebElement wb1;
+	@FindBy(xpath="//h2[contains(text(),'Women -')]")private WebElement womancategoryheading;
+	@FindBy(xpath="//a[normalize-space()='Men']")private WebElement mencategory;
+	@FindBy(xpath="//a[normalize-space()='Jeans']")private WebElement jeans;
+	@FindBy(xpath="//h2[normalize-space()='Men - Jeans Products']")private WebElement mencategorypage;
 	
-	public boolean categorypagevaliadtion() {
+	public boolean isWomenCategoryPageDisplayed() {
 		return womancategoryheading.isDisplayed();
 	}
 	
-	public void menselection() {
-		mencategory.click();
-		jeans.click();
-	}
-	
-	public boolean mencategorypagevaliadtion() {
+	public boolean IsMenCategoryPageVisible() {
 		return mencategorypage.isDisplayed();
 	}
 
+	public void chooseMenCategory() {
+		mencategory.click();
+		jeans.click();
+	}
 
 }

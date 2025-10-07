@@ -6,47 +6,48 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-import utils.UtilityClass;
+import utils.ScrollNWaitUtils;
 
 public class AccountCreationPage {
-	WebDriver driver;
+	
+	private WebDriver driver;
 	
 	public AccountCreationPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath="//b[normalize-space()='Enter Account Information']") WebElement enteraccountinfo;
-	@FindBy(xpath="//div[@id='uniform-id_gender1']") WebElement radioMr;
-	@FindBy(xpath="//input[@id='password']") WebElement password;
-	@FindBy(xpath="//select[@id='days']") WebElement Day;
-	@FindBy(xpath="//select[@id='months']") WebElement Month;
-	@FindBy(xpath="//select[@id='years']") WebElement Year;
-	@FindBy(xpath="//input[@id='newsletter']") WebElement newsletter;
-	@FindBy(xpath="//input[@id='optin']") WebElement optin;
-	@FindBy(xpath="//input[@id='first_name']") WebElement firstname;
-	@FindBy(xpath="//input[@id='last_name']") WebElement lastname;
-	@FindBy(xpath="//input[@id='company']") WebElement compname;
-	@FindBy(xpath="//input[@id='address1']") WebElement address1;
-	@FindBy(xpath="//input[@id='address2']") WebElement address2;
-	@FindBy(xpath="//input[@id='state']") WebElement stateinput;
-	@FindBy(xpath="//input[@id='city']") WebElement cityinput;
-	@FindBy(xpath="//input[@id='zipcode']") WebElement zipcode;
-	@FindBy(xpath="//input[@id='mobile_number']") WebElement mobileno;
-	@FindBy(xpath="//select[@id='country']") WebElement countryselection;
-	@FindBy(xpath="//button[normalize-space()='Create Account']") WebElement createaccountbutton;
+	@FindBy(xpath="//b[normalize-space()='Enter Account Information']") private WebElement enteraccountinfo;
+	@FindBy(xpath="//div[@id='uniform-id_gender1']") private WebElement radioMr;
+	@FindBy(xpath="//input[@id='password']") private WebElement password;
+	@FindBy(xpath="//select[@id='days']") private WebElement Day;
+	@FindBy(xpath="//select[@id='months']") private WebElement Month;
+	@FindBy(xpath="//select[@id='years']") private WebElement Year;
+	@FindBy(xpath="//input[@id='newsletter']") private WebElement newsletter;
+	@FindBy(xpath="//input[@id='optin']") private WebElement optin;
+	@FindBy(xpath="//input[@id='first_name']") private WebElement firstname;
+	@FindBy(xpath="//input[@id='last_name']") private WebElement lastname;
+	@FindBy(xpath="//input[@id='company']") private WebElement compname;
+	@FindBy(xpath="//input[@id='address1']") private WebElement address1;
+	@FindBy(xpath="//input[@id='address2']") private WebElement address2;
+	@FindBy(xpath="//input[@id='state']") private WebElement stateinput;
+	@FindBy(xpath="//input[@id='city']") private WebElement cityinput;
+	@FindBy(xpath="//input[@id='zipcode']") private WebElement zipcode;
+	@FindBy(xpath="//input[@id='mobile_number']") private WebElement mobileno;
+	@FindBy(xpath="//select[@id='country']") private WebElement countryselection;
+	@FindBy(xpath="//button[normalize-space()='Create Account']") private WebElement createaccountbutton;
 	
-	public boolean enteraccountinfomessage() {
+	public boolean isEnterAccountInfoMessageVisible() {
 		return enteraccountinfo.isDisplayed();
 		
 	}
 	
-	public void enterngvalue(String pass,String fname,String lname,String cname,
+	public void fillAccountDetails(String pass,String fname,String lname,String cname,
 			String addr1, String addr2,String state, String city,String pin,String mobile) {
 		
 		radioMr.click();
 		password.sendKeys(pass);		
-		UtilityClass.scroll(driver, newsletter);
+		ScrollNWaitUtils.scroll(driver, newsletter);
 		newsletter.click();
 		optin.click();
 		firstname.sendKeys(fname);
@@ -60,7 +61,7 @@ public class AccountCreationPage {
 		mobileno.sendKeys(mobile);	
 	}
 	
-	public void dpselection(String day, String month,String year,String country) {
+	public void selectDropDownValue(String day, String month,String year,String country) {
 		
 		new Select(Day).selectByValue(day);
 		new Select(Month).selectByVisibleText(month);
@@ -69,8 +70,8 @@ public class AccountCreationPage {
 		
 	}
 	
-	public void clickbutton() {
-		UtilityClass.scroll(driver, createaccountbutton);
+	public void clickCreateAccountButton() {
+		ScrollNWaitUtils.scroll(driver, createaccountbutton);
 		createaccountbutton.click();
 	}
 	

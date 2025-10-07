@@ -8,28 +8,28 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class BrandPage {
-	WebDriver driver;
+	private WebDriver driver;
 	
 	public BrandPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath="//h2[@class='title text-center']") WebElement hmBrandheading;
-	@FindBy(xpath="//a[@href='/brand_products/Mast & Harbour']") WebElement mhBrandheading;
-	@FindBy(xpath="//div[@class='col-sm-4']") List<WebElement> Products;
+	@FindBy(xpath="//h2[@class='title text-center']") private WebElement hmBrandheading;
+	@FindBy(xpath="//a[@href='/brand_products/Mast & Harbour']") private WebElement mhBrandheading;
+	@FindBy(xpath="//div[@class='col-sm-4']") private List<WebElement> Products;
 	
 	
-	public boolean isHMbrandproductspresent() {
+	public boolean isHMBrandProductsVisible() {
 		return hmBrandheading.isDisplayed();
 	}
 	
-	public boolean isMHbrandproductspresent() {
+	public boolean isMHBrandProductsVisible() {
 		return mhBrandheading.isDisplayed();
 	}
 	
-	public boolean productcount() {
-		return Products.isEmpty();	
+	public boolean areProductsPresent() {
+		return !Products.isEmpty();	
 	}
 
 }

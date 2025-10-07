@@ -6,31 +6,30 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import utils.UtilityClass;
+import utils.ScrollNWaitUtils;
 
 public class ProductDetailsPage {
 	
-	WebDriver driver;
+	private WebDriver driver;
 	
 	public ProductDetailsPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath="//h2[normalize-space()='Winter Top']") WebElement productdetail;
-	@FindBy(xpath="//input[@id='quantity']") WebElement productquantity;
-	@FindBy(xpath="//button[normalize-space()='Add to cart']") WebElement addtocartbtn;
-	@FindBy(xpath="//u[normalize-space()='View Cart']") WebElement viewcartlink;
+	@FindBy(xpath="//h2[normalize-space()='Winter Top']") private WebElement productdetail;
+	@FindBy(xpath="//input[@id='quantity']") private WebElement productquantity;
+	@FindBy(xpath="//button[normalize-space()='Add to cart']") private WebElement addtocartbtn;
+	@FindBy(xpath="//u[normalize-space()='View Cart']") private WebElement viewcartlink;
 	
-	public boolean productisvisible() {
+	public boolean isProductVisible() {
 		return productdetail.isDisplayed();
 	}
 	
-	public void addingquantity() {
+	public void addProductQuantity() {
 		productquantity.sendKeys(Keys.ARROW_UP,Keys.ARROW_UP,Keys.ARROW_UP);
 		addtocartbtn.click();
-		UtilityClass.waituntilclickable(driver, viewcartlink);
-		viewcartlink.click();
+		ScrollNWaitUtils.waitAndClick(driver, viewcartlink);
 	}
 	
 }

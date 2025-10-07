@@ -7,16 +7,16 @@ import org.openqa.selenium.support.PageFactory;
 
 public class TestCasesPage {
 
-	WebDriver driver;
+	private WebDriver driver;
 	
 	public TestCasesPage(WebDriver driver){
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath="//b[normalize-space()='Test Cases']")WebElement testcaseheading;
+	@FindBy(xpath="//b[normalize-space()='Test Cases']")private WebElement testcaseheading;
 	
-	public boolean isTestcaseTitlevisible() {
+	public boolean isTestcaseTitleVisible() {
 		return testcaseheading.isDisplayed();
 	}
 	

@@ -1,40 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-16T09:07:26 IST" name="Mainsuite" finished-at="2025-09-16T09:08:47 IST" duration-ms="80694">
+  <suite started-at="2025-10-07T19:59:02 IST" name="Mainsuite" finished-at="2025-10-07T20:00:59 IST" duration-ms="117552">
     <groups>
     </groups>
-    <test started-at="2025-09-16T09:07:26 IST" name="AddSearchedProductsToCart_Login Testing" finished-at="2025-09-16T09:08:47 IST" duration-ms="80694">
-      <class name="testcases.SearchingProducts">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testcases.SearchingProducts@6743e411]" started-at="2025-09-16T09:07:26 IST" name="setup" finished-at="2025-09-16T09:07:44 IST" duration-ms="17412" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://www.automationexercise.com/]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2025-10-07T19:59:02 IST" name="LoginLogoutUser" finished-at="2025-10-07T20:00:49 IST" duration-ms="107141">
+      <class name="testcases.LoginLogoutTests">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.LoginLogoutTests@179ece50]" started-at="2025-10-07T19:59:02 IST" name="setup" finished-at="2025-10-07T20:00:14 IST" duration-ms="72101" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="searchforProducts(java.lang.String)[pri:1, instance:testcases.SearchingProducts@6743e411]" started-at="2025-09-16T09:07:44 IST" name="searchforProducts" data-provider="search products" finished-at="2025-09-16T09:08:27 IST" duration-ms="43256" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[green]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchforProducts -->
-        <test-method signature="loginusingvalidcredentials(java.lang.String,java.lang.String)[pri:2, instance:testcases.SearchingProducts@6743e411]" started-at="2025-09-16T09:08:27 IST" name="loginusingvalidcredentials" data-provider="validLoginCredentials" finished-at="2025-09-16T09:08:45 IST" duration-ms="17917" status="PASS">
+        <test-method signature="loginusingvalidcredentials(java.lang.String,java.lang.String)[pri:0, instance:testcases.LoginLogoutTests@179ece50]" started-at="2025-10-07T20:00:14 IST" name="loginusingvalidcredentials" data-provider="validLoginCredentials" finished-at="2025-10-07T20:00:48 IST" duration-ms="34768" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -47,18 +24,121 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//li/a[contains(text(),"Logged in as")]"}
+  (Session info: chrome=141.0.7390.55)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.6.1', java.version: '22.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ac9951ffe1f52633e4c6b72db3572fcb, findElement {using=xpath, value=//li/a[contains(text(),"Logged in as")]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.55, chrome: {chromedriverVersion: 141.0.7390.54 (b95610d5c4a5..., userDataDir: /var/folders/x9/17bns_0j3jl...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61756}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:61756/devtoo..., se:cdpVersion: 141.0.7390.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ac9951ffe1f52633e4c6b72db3572fcb]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//li/a[contains(text(),"Logged in as")]"}
+  (Session info: chrome=141.0.7390.55)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '15.6.1', java.version: '22.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ac9951ffe1f52633e4c6b72db3572fcb, findElement {using=xpath, value=//li/a[contains(text(),"Logged in as")]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.55, chrome: {chromedriverVersion: 141.0.7390.54 (b95610d5c4a5..., userDataDir: /var/folders/x9/17bns_0j3jl...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61756}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:61756/devtoo..., se:cdpVersion: 141.0.7390.55, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ac9951ffe1f52633e4c6b72db3572fcb
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy14.isDisplayed(Unknown Source)
+at pages.HomePage.isLoggedInAsUserVisible(HomePage.java:53)
+at testcases.LoginLogoutTests.loginusingvalidcredentials(LoginLogoutTests.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1570)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginusingvalidcredentials -->
-        <test-method signature="cartvaliadtion()[pri:3, instance:testcases.SearchingProducts@6743e411]" started-at="2025-09-16T09:08:45 IST" name="cartvaliadtion" finished-at="2025-09-16T09:08:47 IST" duration-ms="1880" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- cartvaliadtion -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testcases.SearchingProducts@6743e411]" started-at="2025-09-16T09:08:47 IST" name="teardown" finished-at="2025-09-16T09:08:47 IST" duration-ms="197" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testcases.LoginLogoutTests@179ece50]" started-at="2025-10-07T20:00:48 IST" name="teardown" finished-at="2025-10-07T20:00:49 IST" duration-ms="216" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- testcases.SearchingProducts -->
-    </test> <!-- AddSearchedProductsToCart_Login Testing -->
+      </class> <!-- testcases.LoginLogoutTests -->
+    </test> <!-- LoginLogoutUser -->
+    <test started-at="2025-10-07T19:59:02 IST" name="ContactUsForm" finished-at="2025-10-07T20:00:59 IST" duration-ms="117552">
+      <class name="testcases.ContactUsTests">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testcases.ContactUsTests@20d525]" started-at="2025-10-07T19:59:02 IST" name="setup" finished-at="2025-10-07T20:00:15 IST" duration-ms="73176" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="contactUsformvalidation(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testcases.ContactUsTests@20d525]" started-at="2025-10-07T20:00:15 IST" name="contactUsformvalidation" data-provider="contactusform" finished-at="2025-10-07T20:00:59 IST" duration-ms="44251" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Rudra]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[rudra@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[QuickReminder]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[You are doing amazing. 1.5L/month job is on your lap by oct 2025. Not just that but several offers are on your lap by then]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[/src/main/resources/Sample1.pdf]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contactUsformvalidation -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testcases.ContactUsTests@20d525]" started-at="2025-10-07T20:00:59 IST" name="teardown" finished-at="2025-10-07T20:00:59 IST" duration-ms="112" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- testcases.ContactUsTests -->
+    </test> <!-- ContactUsForm -->
   </suite> <!-- Mainsuite -->
 </testng-results>

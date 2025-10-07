@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Mainsuite]" guice-stage="DEVELOPMENT">
-  <parameter name="browser" value="chrome"/>
-  <parameter name="url" value="https://www.automationexercise.com/"/>
-  <test thread-count="5" name="AddSearchedProductsToCart_Login Testing(failed)">
+<suite thread-count="2" parallel="tests" name="Failed suite [Mainsuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="tests" name="LoginLogoutUser(failed)">
     <classes>
-      <class name="testcases.SearchingProducts">
+      <class name="testcases.LoginLogoutTests">
         <methods>
+          <include name="loginusingvalidcredentials" invocation-numbers="0"/>
           <include name="setup"/>
-          <include name="cartvaliadtion"/>
           <include name="teardown"/>
-          <include name="searchforProducts" invocation-numbers="0"/>
         </methods>
-      </class> <!-- testcases.SearchingProducts -->
+      </class> <!-- testcases.LoginLogoutTests -->
     </classes>
-  </test> <!-- AddSearchedProductsToCart_Login Testing(failed) -->
+  </test> <!-- LoginLogoutUser(failed) -->
 </suite> <!-- Failed suite [Mainsuite] -->

@@ -7,30 +7,27 @@ import org.openqa.selenium.support.PageFactory;
 
 public class AccountCreatedDeletedPage {
 	
-	WebDriver driver;
+	private WebDriver driver;
 	
 	public AccountCreatedDeletedPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);	
 	}
 	
-	@FindBy(xpath="//b[normalize-space()='Account Created!']") WebElement acctcreatedmessage;
-	@FindBy(xpath="//a[@class='btn btn-primary']") WebElement continuebutton;
-	@FindBy(xpath="//b[normalize-space()='Account Deleted!']") WebElement acctdeletedmessage;
+	@FindBy(xpath="//b[normalize-space()='Account Created!']") private WebElement acctcreatedmessage;
+	@FindBy(xpath="//a[@class='btn btn-primary']") private WebElement continuebutton;
+	@FindBy(xpath="//b[normalize-space()='Account Deleted!']") private WebElement acctdeletedmessage;
 	
-	public boolean accountcreatedmessageverify() {
+	public boolean isAccountCreatedMessageDisplayed() {
 		 return acctcreatedmessage.isDisplayed();
 	}
 	
-	public void continuebtn() {
+	public void clickContinueButton() {
 		continuebutton.click();
 	}
 	
-	public boolean accountdeletedmessageverify() {
+	public boolean isAccountDeletedMessageDisplayed() {
 		return acctdeletedmessage.isDisplayed();
 	}
 	
-	
-	
-
 }
