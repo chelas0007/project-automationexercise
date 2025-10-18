@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="2" parallel="tests" name="Failed suite [Mainsuite]" guice-stage="DEVELOPMENT">
-  <test thread-count="2" parallel="tests" name="LoginLogoutUser(failed)">
+<suite name="Failed suite [Mainsuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="RegisterNLoginuser(failed)">
     <classes>
-      <class name="testcases.LoginLogoutTests">
+      <class name="com.automationexercise.testcases.RegisterNLoginTests">
         <methods>
-          <include name="loginusingvalidcredentials" invocation-numbers="0"/>
-          <include name="setup"/>
+          <include name="registeringNewUserTest" invocation-numbers="0"/>
           <include name="teardown"/>
+          <include name="deleteAccountTest" invocation-numbers="0"/>
+          <include name="registerUsingExistingMailTest" invocation-numbers="0"/>
+          <include name="setup"/>
+          <include name="signInUserTest" invocation-numbers="0"/>
+          <include name="loginUsingInvalidValueTest" invocation-numbers="0 1"/>
+          <include name="afterClassMethod"/>
         </methods>
-      </class> <!-- testcases.LoginLogoutTests -->
+      </class> <!-- com.automationexercise.testcases.RegisterNLoginTests -->
     </classes>
-  </test> <!-- LoginLogoutUser(failed) -->
+  </test> <!-- RegisterNLoginuser(failed) -->
 </suite> <!-- Failed suite [Mainsuite] -->

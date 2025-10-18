@@ -1,0 +1,30 @@
+package com.automationexercise.testcases;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.automationexercise.base.Base;
+import com.automationexercise.pages.BrandPage;
+import com.automationexercise.pages.HomePage;
+import com.automationexercise.pages.ProductsPage;
+
+public class BrandTests extends Base {
+	
+	@Test
+	public void validateBrands() {
+		HomePage hp = new HomePage(driver);
+		ProductsPage pp = new ProductsPage(driver);
+		BrandPage bp = new BrandPage(driver);
+		
+		hp.clickProductsButton();
+		
+		Assert.assertTrue(pp.isBrandVisible(),"Brand is not visible");
+		pp.isBrandVisible();
+		Assert.assertTrue(bp.isHMBrandProductsVisible(),"HM Brand page is not visible");
+		Assert.assertTrue(bp.areProductsPresent(),"HM Brand products are not visible");
+		pp.selectMHbrand();
+		Assert.assertTrue(bp.isMHBrandProductsVisible(),"MH Brand page is not visible");
+		Assert.assertTrue(bp.areProductsPresent(),"MH Brand products are not visible");	
+	}
+
+}
